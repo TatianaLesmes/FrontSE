@@ -1,0 +1,35 @@
+body {
+    background-color: #f8f9fa;
+}
+
+h1 {
+    color: #343a40;
+}
+
+label {
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col-md-2 {
+    flex: 0 0 14%; /* Hacemos los campos pequeños para que se alineen bien en la misma fila */
+    max-width: 14%;
+}
+
+button {
+    width: auto; /* Ajustar el tamaño del botón */
+    padding: 8px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+#resultado {
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+}

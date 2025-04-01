@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Experto Cultivo</title>
+    <!-- Incluir Bootstrap desde CDN para estilo -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Sistema Experto Cultivo</h1>
+        
+        <!-- Formulario en una sola fila usando Flexbox -->
+        <form id="formulario" class="mt-4 d-flex flex-wrap justify-content-between">
+            <!-- Región -->
+            <div class="mb-3 col-md-2">
+                <label for="region" class="form-label">Región</label>
+                <select class="form-select" id="region">
+                    <option>Caribe</option>
+                    <option>Insular</option>
+                    <option>Pacífica</option>
+                    <option>Andina</option>
+                    <option>Orinoquía</option>
+                    <option>Amazonía</option>
+                </select>
+            </div>
+
+            <!-- Piso Térmico -->
+            <div class="mb-3 col-md-2">
+                <label for="piso" class="form-label">Piso térmico</label>
+                <select class="form-select" id="piso">
+                    <option>Cálido</option>
+                    <option>Templado</option>
+                    <option>Frío</option>
+                    <option>Páramo</option>
+                </select>
+            </div>
+
+            <!-- Tipo de Suelo -->
+            <div class="mb-3 col-md-2">
+                <label for="suelo" class="form-label">Tipo de suelo</label>
+                <select class="form-select" id="suelo">
+                    <option>Arcilloso</option>
+                    <option>Arenoso</option>
+                    <option>Limoso</option>
+                    <option>Franco</option>
+                    <option>Orgánico</option>
+                    <option>Pedregoso-rocoso</option>
+                    <option>Salino-sódico</option>
+                </select>
+            </div>
+
+            <!-- Precipitación Anual -->
+            <div class="mb-3 col-md-2">
+                <label for="precipitacion" class="form-label">Precipitación anual</label>
+                <select class="form-select" id="precipitacion">
+                    <option>Caribe: 500 - 4000 mm</option>
+                    <option>Insular: 0 - 750 mm</option>
+                    <option>Pacífica: >12700 mm</option>
+                    <option>Andina: 500 - 7000 mm</option>
+                    <option>Orinoquía: 250 - 1500 mm</option>
+                    <option>Amazonía: 1000 - 1500 mm</option>
+                </select>
+            </div>
+
+            <!-- Propósito del Cultivo -->
+            <div class="mb-3 col-md-2">
+                <label for="proposito" class="form-label">Propósito del cultivo</label>
+                <select class="form-select" id="proposito">
+                    <option>Consumo personal</option>
+                    <option>Venta local</option>
+                    <option>Exportación</option>
+                </select>
+            </div>
+
+
+             <!-- Temperatura Promedio -->
+             <div class="mb-3 col-md-2">
+                <label for="temperatura" class="form-label">Temperatura prom</label>
+                <select class="form-select" id="temperatura">
+                    <option>Cálido: > 24°C</option>
+                    <option>Templado: > 18°C</option>
+                    <option>Frío: < 18°C</option>
+                    <option>Páramo: < 10°C</option>
+                </select>
+            </div>
+
+
+
+            <!-- Botón para obtener selección (alineado en una nueva fila) -->
+            <div class="col-md-12 d-flex justify-content-center mt-4">
+                <button type="button" class="btn btn-primary btn-sm" id="obtenerSeleccion">Obtener selección</button>
+            </div>
+        </form>
+
+        <hr>
+
+        <!-- Mostrar la selección -->
+        <div id="resultado" class="mt-4">
+            <h3>Selección realizada:</h3>
+            <pre id="seleccion"></pre>
+        </div>
+    </div>
+
+    <!-- Incluir JS desde CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
